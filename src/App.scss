@@ -21,6 +21,12 @@ a,
   margin-right: 12px;
 }
 
+.nav-tabs {
+  .nav-item {
+    cursor: pointer;
+  }
+}
+
 .country-wrapper {
   display: flex;
   flex-wrap: wrap;
