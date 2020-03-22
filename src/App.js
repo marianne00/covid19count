@@ -3,6 +3,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import Header from './Header'
 import Countries from './Countries'
+import Philippines from './Philippines'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,6 +18,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route path="/" exact component={Countries} />
+            <Route path="/ph" exact component ={Philippines} />
           </Switch>
         </div>
       </HashRouter>

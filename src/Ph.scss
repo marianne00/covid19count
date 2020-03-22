@@ -1,0 +1,157 @@
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+
+  background: #e5e5ee;
+
+  div {
+    display: flex;
+    justify-content: center;
+    min-width: 120px;
+    max-width: 120px;
+
+    font-weight: bold;
+  }
+}
+
+.hide-mobile {
+  display: flex !important;
+}
+
+.hide-desktop {
+  display: none !important;
+}
+
+.case-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .case-item {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: space-between;
+    align-items: center;
+    // flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: #e5e5ee;
+
+    div {
+      min-width: 120px;
+      max-width: 120px;
+    
+      &:not(:first-child) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    p {
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.other-info {
+  p {
+    &:first-child {
+      padding-bottom: 10px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid gainsboro;
+    }
+  }
+}
+
+.status-badge {
+  padding: 5px;
+
+  color: white;
+  
+  border-radius: 50px;
+  &.recover {
+    background: green;
+  }
+
+  &.died {
+    background: red;
+  }
+
+  &.admitted {
+    background: #007BFF;
+  }
+}
+
+.travel-history {
+  font-weight: bold;
+
+  &.yes {
+    color: red;
+  }
+
+  &.no {
+    color: green;
+  }
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  .status-badge {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .top-row {
+    display: none;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .hide-desktop {
+    display: inline-block !important;
+  }
+
+  .case-wrapper {
+    .case-item {
+      flex: 0 0 48%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 15px;
+      margin-bottom: 20px;
+
+      border-radius: 10px;
+
+      div {
+        max-width: 100%;
+        min-width: auto;
+      }
+
+      .nationality {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .case-wrapper {
+    .case-item {
+      flex: 0 0 100%;
+    }
+  }
+}

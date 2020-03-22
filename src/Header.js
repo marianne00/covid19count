@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import logo from './virus.svg';
 import './App.scss';
@@ -26,14 +27,21 @@ const Header = () => {
         <span className="navbar-brand mb-0 h1 d-flex align-items-center flex-wrap">
           <img src={logo} className="svg"/>
           COVID19 Count
+
           <a href="https://github.com/Marianne00" className="author-name">Author: Marianne de Asis</a>
-          </span>
+        </span>
+          
         {globalData ? 
-          <div className="global-data-wrapper">
-            <div>Global Data</div>
-            <div>Cases: {globalData.cases}</div>
-            <div>Recovered: {globalData.recovered}</div>
-            <div>Deaths: {globalData.deaths}</div>
+          <div>
+            <div className="global-data-wrapper">
+              <div>Global Data</div>
+              <div>Cases: {globalData.cases}</div>
+              <div>Recovered: {globalData.recovered}</div>
+              <div>Deaths: {globalData.deaths}</div>   
+            </div>
+            <div className="link-holder">
+              <Link to="/">Global</Link> <span className="delimiter">|</span> <Link to="/ph">Philippines in Detail</Link>
+            </div>
           </div>
         : 'Loading...'
         }

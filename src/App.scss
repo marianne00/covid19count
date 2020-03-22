@@ -1,3 +1,5 @@
+@import './Ph.scss';
+
 body {
   background-color: #F8F8F8;
 }
@@ -6,9 +8,17 @@ body {
   padding-top: 60px;
 }
 
-.author-name {
+.author-name,
+a,
+.delimiter {
   flex: 0 0 100%;
   font-size: 13px;
+  margin-bottom: 0;
+}
+
+.link-holder {
+  text-align: right;
+  margin-right: 12px;
 }
 
 .country-wrapper {
