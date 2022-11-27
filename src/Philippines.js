@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink, Button, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import classnames from 'classnames';
-
-import CaseModal from './CaseModal'
 
 
 export const Philippines = (props) => {

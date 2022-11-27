@@ -25,7 +25,7 @@ const Header = () => {
     <header className="App-header">
       <nav className="navbar fixed-top navbar-light bg-light">
         <span className="navbar-brand mb-0 h1 d-flex align-items-center flex-wrap">
-          <img src={logo} className="svg"/>
+          <img src={logo} className="svg" alt='logo'/>
           COVID19 Count
 
           <a href="https://github.com/Marianne00" className="author-name">Author: Marianne de Asis</a>
